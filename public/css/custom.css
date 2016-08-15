@@ -173,3 +173,6 @@ legend {
 .mailinglist {
     padding-left:2.0rem;
 }
+.image {
+    max-width:100%;
+}
