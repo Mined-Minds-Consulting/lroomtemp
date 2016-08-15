@@ -25,32 +25,37 @@ get '/contact' do
     @title = 'Contact Us'
     erb :contact
 end
+
+Mail.defaults do
+  delivery_method :smtp, 
+  address: "email-smtp.us-east-1.amazonaws.com", 
+  port: 587,
+  :user_name  => ENV['a3smtpuser'],
+  :password   => ENV['a3smtppass'],
+  :enable_ssl => true
+end
 post '/contact' do
   name = params[:firstname]
   lname= params[:lastname]
-  from = params[:email]
-  @to = "#{from}"                   
+  email= params[:email]                  
   comments = params[:message]
   subject= params[:subject]
- Pony.mail(
-    :to => @to, 
-    :from => ENV['from'],
-    :subject => "The Locker Room", 
-    :content_type => 'text/html', 
-    :body => erb(:email2,:layout=>false),
-    :via => :smtp, 
-    :via_options => {
-    :address              => 'email-smtp.us-east-1.amazonaws.com',
-    :port                 => '587',
-    :enable_starttls_auto => true,
-    :user_name           => ENV['a3smtpuser'],
-    :password            => ENV['a3smtppass'],
-    :authentication       => :plain, 
-    :domain               => "localhost.localdomain" 
-        }
-      )
+  email_body = erb(:email2,:layout=>false, :locals=>{:subject => subject,:firstname => name, :lastname => lname, :email => email, :message => comments})
+  
+  mail = Mail.new do
+    from         ENV['from']
+    to           email
+    bcc          ENV['from']
+    subject      subject
+    
+    html_part do
+      content_type 'text/html'
+      body         email_body
+    end
+  end
 
-  erb :submit
+  mail.deliver!
+    erb :success, :locals => {:message => "Thanks for contacting us."}
 end
 
 
@@ -65,6 +70,7 @@ post '/subscribe.php' do
          subscribe=db.exec("insert into mailing_list(email)VALUES('#{email}')")
          erb :mailing_list, :locals => {:message => "Thanks, for joining our mailing list."}
     end
+
 end
 post '/submit' do
     erb :submit1
