@@ -1,0 +1,175 @@
+/* your styles go here */
+
+#map {
+	position: relative;
+	height: 350px;
+	width: 100%;
+    overflow: hidden;   
+}
+.facebook_login {
+    width:30%;
+}
+/*Order now*/
+
+#estimation {
+
+  width: 425px;
+  border: 1px solid #999;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  text-align: center;
+  position: relative;
+}
+
+.grow {
+  height: 750px;
+}
+
+.shrink {
+  height: 200px;
+}
+
+#estimation table, #estimateContact table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+  font: 1.0em sans-serif;
+}
+
+.selection {
+  width: 100%;
+  padding: 10px 5px;
+  vertical-align: bottom;
+    float: left;
+}
+
+select, input[type="color" i][list] {
+    background-color: rgb(248, 248, 248);
+    border-style: solid;
+    border-color: rgb(166, 166, 166);
+}
+
+.price {
+  width: 20%;
+  padding: 0 5px 5px 0;
+  vertical-align: bottom;
+}
+
+th {
+  vertical-align: top;
+  text-align: center;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px 0 0 0;
+  width: 100%;
+  text-align: center;
+}
+
+#total {
+  text-align: left;
+  margin: 20px 0 0 25px;
+}
+
+#total input {
+  width: 30%;
+  color: green;
+}
+
+#estimateSubmit {
+  margin: 20px 0;
+}
+
+.center {
+    text-align: center;
+}
+
+legend {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    border-bottom: none;
+    
+}
+/*carousel*/
+.divBackground{
+   background-size: contain;
+   background-repeat: no-repeat;
+   width: 100%;
+   padding-top: 75%; /* (img-height / img-width * width) (853 / 1280 * 100) */
+}
+.divBackground{
+   background-size: contain;
+   background-repeat: no-repeat;
+   width: 100%;
+   padding-top: 75%; /* (img-height / img-width * width) (853 / 1280 * 100) */
+}
+.adminlink {
+    padding-left:2.0rem;
+    
+}
+.editlink {
+    padding-left:2.0rem;
+    color:white;
+}
+.loggedinlink {
+   color:white;
+    text-align:right;
+}
+.logoutlink {
+    color:white;
+}
+#map {
+	position: relative;
+	height: 350px;
+	width: 100%;
+    overflow: hidden;
+    padding-left:2.0rem;
+    padding-right:2.0rem;
+}
+
+.font-style {
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.new_user{
+        margin-top: 5rem;
+        padding-bottom: 4rem;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+    }
+/*edit profile page*/
+
+.profile
+{
+    display:block;
+    width:270px !important;
+   
+    
+};
+.profile2 {
+    text-align:center;
+    padding-left:2.0rem;
+    width:200px !important;
+}
+
+#success {
+	color:#34495e;
+}
+.container_margin{
+        margin-top: 5rem;
+        padding-bottom: 4rem;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+    }
+.footerinfo {
+    padding-left:2.0rem;
+}
+.mailinglist {
+    padding-left:2.0rem;
+}
