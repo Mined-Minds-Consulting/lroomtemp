@@ -176,3 +176,7 @@ legend {
 .image {
     max-width:100%;
 }
+#imagepadding {
+    padding:0;
+    margin:2.0rem;
+}
