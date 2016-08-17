@@ -180,3 +180,11 @@ legend {
     padding:0;
     margin:2.0rem;
 }
+
+#tempmargin {
+margin-right: 100px;
+}
+
+#tempfont {
+    font-family:'Bitter', serif;
+    }
