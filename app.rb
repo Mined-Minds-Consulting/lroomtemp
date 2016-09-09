@@ -8,7 +8,7 @@ require 'pg'
 
 load "./local_env.rb" if File.exists?("./local_env.rb")
 db_params={
-   host: "lockerroom.c4iif5msrrmw.us-west-2.rds.amazonaws.com",
+   host: "lockerroom.ccar1za80ci4.us-west-2.rds.amazonaws.com",
    port:'5432',
    dbname:'lockerroom',
    user:ENV['user'],
