@@ -59,7 +59,7 @@ post '/contact' do
 end
 
 
-post '/subscribe.php' do
+post '/subscribe' do
     email= params[:email]
     check_email = db.exec("SELECT * FROM mailing_list WHERE email = '#{email}'")
        
