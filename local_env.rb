@@ -1,7 +1,7 @@
 ENV['user_email']='heather.shockney@minedminds.org'
 ENV['user_email_pass']='7242316232Hcs'
 ENV['user']='lockerroom'
-ENV['password']='lockerroom123'
+ENV['password']='Min3d~Minds'
 ENV['key']='W00&oofhQDS'
 ENV['secret']='W00f9663!'
 ENV['from']='heather.shockney@minedminds.org'
